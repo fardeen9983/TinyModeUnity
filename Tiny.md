@@ -26,3 +26,5 @@ Tiny modules are very different form unity Modules. It is not maybe true that Ti
     1. Set Texture type to **Sprite** 
     1. Set sprite mode to **mutliplte**
     1. Set Mesh type to **Full Rect**
+    1. Uncheck **Generate Physics Shape**
+    1. Set Filter Mode to **Point**
