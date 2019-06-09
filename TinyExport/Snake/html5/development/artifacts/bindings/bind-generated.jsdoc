@@ -13,6 +13,12 @@
 /**
 
 @component
+@memberof entities.game.TailGroup
+@name Component
+*/
+/**
+
+@component
 @memberof game
 @name Boundary
 */
@@ -44,6 +50,12 @@
 
 @component
 @memberof game
+@name FoodTag
+*/
+/**
+
+@component
+@memberof game
 @name MoveSpeed
 */
 /**
@@ -57,6 +69,18 @@
 @component
 @memberof game
 @name MoveWithInput
+*/
+/**
+
+@component
+@memberof game
+@name PlayerTag
+*/
+/**
+
+@component
+@memberof game
+@name TailTag
 */
 /**
 
@@ -296,6 +320,12 @@
 
 @system
 @memberof game
+@name EatingSystemJS
+*/
+/**
+
+@system
+@memberof game
 @name FoodSpawnSystemJS
 */
 /**
@@ -303,6 +333,12 @@
 @system
 @memberof game
 @name InputMovementSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name TailSystemJS
 */
 
 

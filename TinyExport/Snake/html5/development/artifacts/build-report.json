@@ -76,27 +76,33 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/entities.js",
-                "Size": 4249,
-                "CompressedSize": 1059
+                "Size": 5936,
+                "CompressedSize": 1172
             },
             "Children": [{
                 "Item": {
                     "Name": "FoodGroup",
-                    "Size": 1409,
-                    "CompressedSize": 494
+                    "Size": 1423,
+                    "CompressedSize": 499
                 }
             }, {
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 2765,
-                    "CompressedSize": 854
+                    "Size": 3028,
+                    "CompressedSize": 918
+                }
+            }, {
+                "Item": {
+                    "Name": "TailGroup",
+                    "Size": 1412,
+                    "CompressedSize": 495
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/bindings.js",
-                "Size": 87340,
-                "CompressedSize": 6951
+                "Size": 96486,
+                "CompressedSize": 7675
             }
         }, {
             "Item": {
@@ -107,15 +113,15 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Snake/html5/development/artifacts/scripts/tsc-emit.js",
-                    "Size": 8374,
-                    "CompressedSize": 2116
+                    "Size": 11357,
+                    "CompressedSize": 2730
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/main.js",
-                "Size": 2308,
-                "CompressedSize": 781
+                "Size": 2628,
+                "CompressedSize": 824
             }
         }, {
             "Item": {

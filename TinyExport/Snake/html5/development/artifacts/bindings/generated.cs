@@ -6,6 +6,7 @@ using ut;
 using UTiny.HTML;
 using UTiny.Rendering;
 using ut.EditorExtensions;
+using UTiny.HitBox2D;
 
 /*
  * !!! TEMP UNITL PROPER SCENE FORMAT !!!
@@ -24,6 +25,12 @@ namespace entities.game
         {
         }
     }
+    namespace TailGroup
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
 }
 
 namespace game
@@ -35,11 +42,20 @@ namespace game
         public float minY;
         public float maxY;
     }
+    public struct FoodTag : IComponentData
+    {
+    }
     public struct MoveSpeed : IComponentData
     {
         public float speed;
     }
     public struct MoveWithInput : IComponentData
+    {
+    }
+    public struct PlayerTag : IComponentData
+    {
+    }
+    public struct TailTag : IComponentData
     {
     }
 }
@@ -177,6 +193,16 @@ namespace ut.EditorExtensions
         public int layer;
     }
 }
+
+namespace ut.HitBox2D
+{
+}
+namespace game
+{
+    public class EatingSystemJS : IComponentSystem
+    {
+    }
+}
 namespace game
 {
     public class FoodSpawnSystemJS : IComponentSystem
@@ -186,6 +212,12 @@ namespace game
 namespace game
 {
     public class InputMovementSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    public class TailSystemJS : IComponentSystem
     {
     }
 }

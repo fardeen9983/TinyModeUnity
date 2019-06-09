@@ -23,6 +23,18 @@ namespace entities.game.MainGroup
 
     }
 }
+namespace entities.game.TailGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -34,6 +46,18 @@ namespace game
         public float maxX;
         public float minY;
         public float maxY;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct FoodTag : UTiny.IComponentData
+    {
+
+
 
 
 
@@ -56,6 +80,30 @@ namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct MoveWithInput : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct PlayerTag : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct TailTag : UTiny.IComponentData
     {
 
 

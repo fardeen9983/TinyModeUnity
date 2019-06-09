@@ -26,7 +26,12 @@ Tiny modules are very different form unity Modules. It is not maybe true that Ti
 1. Create a boundary component for the Player sprite and add it to the Player Entity
 1. Add 4 decimal values for the boundary values across the axis according to the width/height ratio and halfVerticalScale property of Camera
 1. Add another Component for controlling movement with a float value representing Movement speed and set its value to 0.64 relative to the size of object.
+1. Now we need to add tags to identify Player, it's Tail and the existing food. Create 3 separate components and add them to each of them
 1. Add a script to note which object is to be moved on recieving Input. Anything having this component will be moved when input is recieved by the move script
+
+___
+## Create Systems (Scripts) 
+
 1. Create a Typscript System script for moving entites when input is recieved
 
     TypeScript systems in Tiny mode give us a namespace and creates a new class extending ut.Components
@@ -69,8 +74,12 @@ Tiny modules are very different form unity Modules. It is not maybe true that Ti
 
     1. Create a filed to keep in track of a single Food entity. So that only one remains on the screen at a time.
     1. Create a FoodGroup to hold the Food Entity with the Ball sprite
-    1. Create a Spawn mehtod requiring a reference to the world and Entity group we want to spawn it in.
-    1. 
+    1. Create a Spawn mehtod requiring a reference to the world and Entity group we want to spawn it in and will spawn the entity from one of the EntityGroups provided indexes onto the screen at a random postion.
+
+1. The next script will manage the vanishing of the food as the snake collides with it and thus adding a unit to it's tail
+    1. For this we need enable additional modules onto the Tiny Project, namely UTiny.HitBox2D
+    1. From this module we will add a RectHitBox2D component which doesn't replace the Collider from Unity entirely but will add additional component like the HitBoxOverlapResults temporarily upon collision
+1. Create a Tail system to add onto the Player a tail whenever it hits a body. Create a TailGroup for t as well
 
 ## Platformer Tiny Project
 ### Steps

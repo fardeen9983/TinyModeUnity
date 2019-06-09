@@ -30,6 +30,22 @@ class Component extends ut.Component {
 }
 
 }
+declare namespace entities.game.TailGroup {
+
+class Component extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Component): Component;
+  static _toPtr(p: number, v: Component): void;
+  static _tempHeapPtr(v: Component): number;
+  static _dtorFn(v: Component): void;
+}
+
+}
 declare namespace game {
 
 class Boundary extends ut.Component {
@@ -51,6 +67,22 @@ class Boundary extends ut.Component {
   static _toPtr(p: number, v: Boundary): void;
   static _tempHeapPtr(v: Boundary): number;
   static _dtorFn(v: Boundary): void;
+}
+
+}
+declare namespace game {
+
+class FoodTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: FoodTag): FoodTag;
+  static _toPtr(p: number, v: FoodTag): void;
+  static _tempHeapPtr(v: FoodTag): number;
+  static _dtorFn(v: FoodTag): void;
 }
 
 }
@@ -85,6 +117,38 @@ class MoveWithInput extends ut.Component {
   static _toPtr(p: number, v: MoveWithInput): void;
   static _tempHeapPtr(v: MoveWithInput): number;
   static _dtorFn(v: MoveWithInput): void;
+}
+
+}
+declare namespace game {
+
+class PlayerTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: PlayerTag): PlayerTag;
+  static _toPtr(p: number, v: PlayerTag): void;
+  static _tempHeapPtr(v: PlayerTag): number;
+  static _dtorFn(v: PlayerTag): void;
+}
+
+}
+declare namespace game {
+
+class TailTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: TailTag): TailTag;
+  static _toPtr(p: number, v: TailTag): void;
+  static _tempHeapPtr(v: TailTag): number;
+  static _dtorFn(v: TailTag): void;
 }
 
 }
@@ -391,10 +455,16 @@ class EntityLayer extends ut.Component {
 
 }
 declare namespace game {
+var EatingSystemJS: ut.SystemJS;
+}
+declare namespace game {
 var FoodSpawnSystemJS: ut.SystemJS;
 }
 declare namespace game {
 var InputMovementSystemJS: ut.SystemJS;
+}
+declare namespace game {
+var TailSystemJS: ut.SystemJS;
 }
 
 

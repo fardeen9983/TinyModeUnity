@@ -14,6 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 var game;
 (function (game) {
     /** New System */
+    var EatingSystem = /** @class */ (function (_super) {
+        __extends(EatingSystem, _super);
+        function EatingSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        EatingSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            var didEat = false;
+            //Search through the world for entites with collisons (specifically the Food entity)
+            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalPosition, ut.HitBox2D.HitBoxOverlapResults, game.FoodTag], function (entity, position, hitResult, tag) {
+                //Inside this loop we will enter only we have had contacts with the player entity and others
+                didEat = true;
+                //In this case we need to destroy the entity we found
+                _this.world.destroyEntity(entity);
+            });
+            //Set the food entity in the FoodSpawnSystem as null so to generate next Food Entity
+            if (didEat) {
+                game.FoodSpawnSystem.food = null;
+            }
+        };
+        return EatingSystem;
+    }(ut.ComponentSystem));
+    game.EatingSystem = EatingSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
     var FoodSpawnSystem = /** @class */ (function (_super) {
         __extends(FoodSpawnSystem, _super);
         function FoodSpawnSystem() {
@@ -22,10 +49,10 @@ var game;
         FoodSpawnSystem.prototype.OnUpdate = function () {
             //If food doesnt exist in the world spawn it
             if (!this.world.exists(game.FoodSpawnSystem.food)) {
-                game.FoodSpawnSystem.food = this.Spawn(this.world, "game.FoodGroup", new Vector3(this.GetRandom(-8, 8), this.GetRandom(-4, 4)), 0);
+                game.FoodSpawnSystem.food = game.FoodSpawnSystem.Spawn(this.world, "game.FoodGroup", new Vector3(game.FoodSpawnSystem.GetRandom(-8, 8), game.FoodSpawnSystem.GetRandom(-4, 4)), 0);
             }
         };
-        FoodSpawnSystem.prototype.Spawn = function (world, entityGroup, position, entityIndex) {
+        FoodSpawnSystem.Spawn = function (world, entityGroup, position, entityIndex) {
             if (position === void 0) { position = null; }
             if (entityIndex === void 0) { entityIndex = 0; }
             //Instatntiate the Food Entity Group
@@ -38,7 +65,7 @@ var game;
             }
             return Entity;
         };
-        FoodSpawnSystem.prototype.GetRandom = function (min, max) {
+        FoodSpawnSystem.GetRandom = function (min, max) {
             return Math.random() * (max - min + 1) + min;
         };
         return FoodSpawnSystem;
@@ -55,6 +82,7 @@ var game;
         }
         InputMovementSystem.prototype.OnUpdate = function () {
             var dt = this.scheduler.deltaTime();
+            var moved = false;
             //Change direction on input 
             this.world.forEach([ut.Entity, game.Boundary, game.MoveSpeed, game.MoveWithInput, ut.Core2D.TransformLocalPosition], function (entity, bounds, speed, tag, position) {
                 if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.W)) {
@@ -87,8 +115,12 @@ var game;
                     if (!localPos.equals(lastPos)) {
                         game.InputMovementSystem.lastPosition = lastPos;
                         position.position = localPos;
+                        moved = true;
                     }
                 });
+                //Make the tail move 
+                if (moved)
+                    game.TailSystem.OnMove(this.world);
             }
         };
         InputMovementSystem.counter = 0;
@@ -97,6 +129,39 @@ var game;
         return InputMovementSystem;
     }(ut.ComponentSystem));
     game.InputMovementSystem = InputMovementSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var TailSystem = /** @class */ (function (_super) {
+        __extends(TailSystem, _super);
+        function TailSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        TailSystem.prototype.OnUpdate = function () {
+        };
+        TailSystem.OnMove = function (world) {
+            //Check if there is a tail and move then only
+            if (this.tails.length == 0)
+                return;
+            //Fetch the last tail that was created
+            var lastTail = this.tails.pop();
+            //Move the last tail to the last position of the player
+            world.usingComponentData(lastTail, [ut.Core2D.TransformLocalPosition], function (position) {
+                position.position = game.InputMovementSystem.lastPosition;
+            });
+            //Now add again a tail to start of the array
+            this.tails.unshift(lastTail);
+        };
+        //Spawn a tail entity to the end of player once he hits a food entity
+        TailSystem.SpawnTail = function (world) {
+            var tail = game.FoodSpawnSystem.Spawn(world, "game.TailGroup", game.InputMovementSystem.lastPosition);
+            this.tails.push(new ut.Entity(tail.index, tail.version));
+        };
+        TailSystem.tails = new Array();
+        return TailSystem;
+    }(ut.ComponentSystem));
+    game.TailSystem = TailSystem;
 })(game || (game = {}));
 var ut;
 (function (ut) {

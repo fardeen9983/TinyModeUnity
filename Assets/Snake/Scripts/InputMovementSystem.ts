@@ -10,7 +10,7 @@ namespace game {
 
         OnUpdate(): void {
             let dt = this.scheduler.deltaTime();
-
+            let moved = false;
             //Change direction on input 
             this.world.forEach([ut.Entity, game.Boundary, game.MoveSpeed, game.MoveWithInput, ut.Core2D.TransformLocalPosition],
                 (entity, bounds, speed, tag, position) => {
@@ -51,8 +51,13 @@ namespace game {
                         if (!localPos.equals(lastPos)) {
                             game.InputMovementSystem.lastPosition = lastPos;
                             position.position = localPos;
+                            moved = true;
+
                         }
                     });
+                    //Make the tail move 
+                    if(moved)
+                    game.TailSystem.OnMove(this.world);
             }
         }
 

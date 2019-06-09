@@ -3,6 +3,16 @@
     "Diagnostics": [],
     "Systems": [
         {
+            "Name": "EatingSystem",
+            "QualifiedName": "game.EatingSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/EatingSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
             "Name": "FoodSpawnSystem",
             "QualifiedName": "game.FoodSpawnSystem",
             "Description": "New System",
@@ -21,6 +31,16 @@
                 "Line": 5,
                 "Character": 17
             }
+        },
+        {
+            "Name": "TailSystem",
+            "QualifiedName": "game.TailSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/TailSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
         }
     ],
     "Filters": [],
@@ -29,40 +49,42 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 51,
+            "Duration": 55,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 201,
+            "Duration": 200,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1001,
-            "Steps": 11
+            "Duration": 1053,
+            "Steps": 13
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 66,
+            "Duration": 77,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 4,
-            "Steps": 2
+            "Duration": 14,
+            "Steps": 4
         }
     ],
     "SourceFiles": [
+        "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/EatingSystem.ts",
         "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/FoodSpawnSystem.ts",
         "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/InputMovementSystem.ts",
+        "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/TailSystem.ts",
         "D:/Projects/Unity/TinyModeUnity/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/Projects/Unity/TinyModeUnity/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "5b3863dcf8d19ed33a6faee579b31098",
-    "GeneratedAt": "Sun Jun 09 2019 23:52:21 GMT+0530 (India Standard Time)"
+    "InputHash": "0f631acb56dc0187a59daf9bdac7781c",
+    "GeneratedAt": "Mon Jun 10 2019 01:54:16 GMT+0530 (India Standard Time)"
 }

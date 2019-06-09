@@ -93,6 +93,17 @@ declare namespace game{
         static _tempHeapPtr(v: Boundary): number;
         static _dtorFn(v: Boundary): void;
     }
+    class FoodTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: FoodTag): FoodTag;
+        static _toPtr(p: number, v: FoodTag): void;
+        static _tempHeapPtr(v: FoodTag): number;
+        static _dtorFn(v: FoodTag): void;
+    }
     class MoveSpeed extends ut.Component {
         constructor();
         speed: number;
@@ -115,6 +126,28 @@ declare namespace game{
         static _toPtr(p: number, v: MoveWithInput): void;
         static _tempHeapPtr(v: MoveWithInput): number;
         static _dtorFn(v: MoveWithInput): void;
+    }
+    class PlayerTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: PlayerTag): PlayerTag;
+        static _toPtr(p: number, v: PlayerTag): void;
+        static _tempHeapPtr(v: PlayerTag): number;
+        static _dtorFn(v: PlayerTag): void;
+    }
+    class TailTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: TailTag): TailTag;
+        static _toPtr(p: number, v: TailTag): void;
+        static _tempHeapPtr(v: TailTag): number;
+        static _dtorFn(v: TailTag): void;
     }
 }
 declare namespace ut{
@@ -255,6 +288,7 @@ declare namespace ut{
             [data: string]: EntityGroupData;
             FoodGroup: EntityGroupData;
             MainGroup: EntityGroupData;
+            TailGroup: EntityGroupData;
         }
     }
 }
