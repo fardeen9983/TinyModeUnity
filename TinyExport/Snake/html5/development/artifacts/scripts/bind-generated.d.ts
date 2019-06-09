@@ -78,6 +78,44 @@ declare namespace ut {
 }
 declare var UT_ASSETS: Object;
 declare namespace game{
+    class Boundary extends ut.Component {
+        constructor();
+        minX: number;
+        maxX: number;
+        minY: number;
+        maxY: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Boundary): Boundary;
+        static _toPtr(p: number, v: Boundary): void;
+        static _tempHeapPtr(v: Boundary): number;
+        static _dtorFn(v: Boundary): void;
+    }
+    class MoveSpeed extends ut.Component {
+        constructor();
+        speed: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: MoveSpeed): MoveSpeed;
+        static _toPtr(p: number, v: MoveSpeed): void;
+        static _tempHeapPtr(v: MoveSpeed): number;
+        static _dtorFn(v: MoveSpeed): void;
+    }
+    class MoveWithInput extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: MoveWithInput): MoveWithInput;
+        static _toPtr(p: number, v: MoveWithInput): void;
+        static _tempHeapPtr(v: MoveWithInput): number;
+        static _dtorFn(v: MoveWithInput): void;
+    }
 }
 declare namespace ut{
 }
@@ -215,7 +253,7 @@ declare namespace ut{
         [module: string]: any;
         game: {
             [data: string]: EntityGroupData;
-            NewEntityGroup: EntityGroupData;
+            MainGroup: EntityGroupData;
         }
     }
 }

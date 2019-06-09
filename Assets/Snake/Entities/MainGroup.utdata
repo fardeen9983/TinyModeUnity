@@ -1,0 +1,86 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "a4324210d52b451b8a4f4e49344021fd",
+    "Name": "MainGroup",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "c6275fd1ac5045c6a998bdf12f5c5c28", "Name": "Camera" },
+        { "$TypeId": 9, "Id": "49bbac2ba14a4ed6995f7dc2544ea860", "Name": "Player" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "c6275fd1ac5045c6a998bdf12f5c5c28",
+    "Name": "Camera",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "12692383f3fef3bb74c209888c5b0939", "Name": "Camera2D" },
+        "Properties": {
+            "backgroundColor": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                }
+            },
+            "clearFlags": {
+                "$TypeId": 8,
+                "Type": { "Id": "76a06ddd38e99125d930e77c6a287872", "Name": "CameraClearFlags" },
+                "Id": "9faedc246f34513076701ef66b5ad74f",
+                "Name": "SolidColor",
+                "Value": 1
+            },
+            "depth": -1
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "49bbac2ba14a4ed6995f7dc2544ea860",
+    "Name": "Player",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "116ec25458e13924db79b077ddf2a4cf", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "d5f4ac01514a40888975132ad9bab8ab", "Name": "Boundary" },
+        "Properties": {
+            "minX": -8.5,
+            "maxX": 8.5,
+            "minY": -2.8,
+            "maxY": 2.8
+        }
+    }, {
+        "Type": { "Id": "837762f98d6d498ca5736a72c1b963f6", "Name": "Movement" }
+    }, {
+        "Type": { "Id": "b63dc903e5c7459590ae18a5010bff4e", "Name": "MoveWithInput" }
+    }]
+}]

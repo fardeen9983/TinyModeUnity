@@ -1,7 +1,28 @@
 {
     "Success": true,
     "Diagnostics": [],
-    "Systems": [],
+    "Systems": [
+        {
+            "Name": "FoodSpawnSystem",
+            "QualifiedName": "game.FoodSpawnSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/FoodSpawnSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "InputMovementSystem",
+            "QualifiedName": "game.InputMovementSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/InputMovementSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        }
+    ],
     "Filters": [],
     "Behaviours": [],
     "Performance": [
@@ -14,32 +35,34 @@
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 170,
+            "Duration": 191,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 920,
-            "Steps": 9
+            "Duration": 1033,
+            "Steps": 11
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 57,
+            "Duration": 70,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 2,
-            "Steps": 0
+            "Duration": 3,
+            "Steps": 2
         }
     ],
     "SourceFiles": [
+        "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/FoodSpawnSystem.ts",
+        "D:/Projects/Unity/TinyModeUnity/Assets/Snake/Scripts/InputMovementSystem.ts",
         "D:/Projects/Unity/TinyModeUnity/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/Projects/Unity/TinyModeUnity/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "f67d54947ccc06616a24617ffca99cbb",
-    "GeneratedAt": "Sun Jun 09 2019 16:45:36 GMT+0530 (India Standard Time)"
+    "InputHash": "949dfe1957d457d7bff2bd5345325cfd",
+    "GeneratedAt": "Sun Jun 09 2019 21:46:30 GMT+0530 (India Standard Time)"
 }

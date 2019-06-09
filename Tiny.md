@@ -17,6 +17,58 @@ One Entity Group can be the "active" group at any given time. The purpose of spe
 
 Tiny modules are very different form unity Modules. It is not maybe true that Tiny mode has all module equivalents of that in possession of Unity. This is because of the serious limitation on Tiny projects.
 
+## Tiny Snake project
+1. Create a new Tiny project for the Snake game
+1. Place all assets in a Graphics folder and set their texture type to sprite and size to 64 and uncheck Generate Physics Shape
+1. Create a new Entity Group by the name MainGroup
+1. Add a Sprite to the MainGroup and name it as     **Player** and assign the Snake sprite to it.
+1. Auto resize the canvas in the Player settings and change resolution to desired values
+1. Create a boundary component for the Player sprite and add it to the Player Entity
+1. Add 4 decimal values for the boundary values across the axis according to the width/height ratio and halfVerticalScale property of Camera
+1. Add another Component for controlling movement with a float value representing Movement speed and set its value to 0.64 relative to the size of object.
+1. Add a script to note which object is to be moved on recieving Input. Anything having this component will be moved when input is recieved by the move script
+1. Create a Typscript System script for moving entites when input is recieved
+
+    TypeScript systems in Tiny mode give us a namespace and creates a new class extending ut.Components
+
+    1.    Inside the script the OnUpdate method is called each time the frame is updated. 
+    1. Create a static Vector3 field to specify the direction the player will move.
+    1. Get the Delta time for smooth transition using 
+        ```ts
+        this.scheduler.deltaTime();
+        ```
+    4. Now find the Entity which will be moved with input, i.e, which has the component MoveWithinput
+        ```ts
+        this.world.forEach([ut.Entity, game.Boundary,
+                game.MoveSpeed, game.MoveWithInput,
+                ut.Core2D.TransformLocalPosition],
+                    (entity, bounds, speed, tag, position) => { 
+    
+                    })
+        ```
+    5. Now we need to fetch the input in the runtime using 
+        ```ts
+        ut.Runtime.Input.getKey()
+        ```
+        The various keycodes are available through the Core2D class
+        ```ts
+        ut.Core2D.KeyCode.W
+        ```
+    6. On recieving input as one of the 4 keys we need to change the direction Vector3 field. Since it is static we can only access it through the game System
+        ```ts
+        game.SystemName.FIELD
+        ```
+    7. Then we can change the Position of the Entity by adding the changed direction
+    1. But this poses a problem as we wont be able to move the Player smoothly by it's size. To do that we make some changes as :
+
+        1. To continously keep the Player moving within the boundary we use Max and Min functions.
+        1. To move the Player only by its size every frame.
+
+
+1. Now lets create a sytem for spawing food for the snake
+
+    1. Create a filed to keep in track of a single Food entity. So that only one remains on the screen at a time.
+
 ## Platformer Tiny Project
 ### Steps
 1. Create a new Tiny project 
@@ -28,3 +80,5 @@ Tiny modules are very different form unity Modules. It is not maybe true that Ti
     1. Set Mesh type to **Full Rect**
     1. Uncheck **Generate Physics Shape**
     1. Set Filter Mode to **Point**
+
+
