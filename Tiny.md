@@ -68,6 +68,9 @@ Tiny modules are very different form unity Modules. It is not maybe true that Ti
 1. Now lets create a sytem for spawing food for the snake
 
     1. Create a filed to keep in track of a single Food entity. So that only one remains on the screen at a time.
+    1. Create a FoodGroup to hold the Food Entity with the Ball sprite
+    1. Create a Spawn mehtod requiring a reference to the world and Entity group we want to spawn it in.
+    1. 
 
 ## Platformer Tiny Project
 ### Steps

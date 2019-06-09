@@ -75,8 +75,8 @@
         "Properties": {
             "minX": -8.5,
             "maxX": 8.5,
-            "minY": -2.8,
-            "maxY": 2.8
+            "minY": -4.5,
+            "maxY": 4.5
         }
     }, {
         "Type": { "Id": "837762f98d6d498ca5736a72c1b963f6", "Name": "Movement" }

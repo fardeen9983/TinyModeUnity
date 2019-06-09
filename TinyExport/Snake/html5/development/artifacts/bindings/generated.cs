@@ -12,6 +12,12 @@ using ut.EditorExtensions;
  */
 namespace entities.game
 {
+    namespace FoodGroup
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
     namespace MainGroup
     {
         public struct Component : IComponentData
@@ -169,6 +175,12 @@ namespace ut.EditorExtensions
     public struct EntityLayer : IComponentData
     {
         public int layer;
+    }
+}
+namespace game
+{
+    public class FoodSpawnSystemJS : IComponentSystem
+    {
     }
 }
 namespace game

@@ -5,6 +5,50 @@
 ut.meta.registerTypes();
 var entities = entities || {};
 entities.game = entities.game || {};
+entities.game.FoodGroup = entities.game.FoodGroup || {};
+entities.game.FoodGroup.Component = function() {
+};
+entities.game.FoodGroup.Component.prototype = Object.create(null);
+entities.game.FoodGroup.Component.prototype.constructor = entities.game.FoodGroup.Component;
+Object.defineProperties(entities.game.FoodGroup.Component.prototype, {
+});
+entities.game.FoodGroup.Component._size = 1;
+entities.game.FoodGroup.Component._fromPtr = function(ptr, v) {
+  v = v || Object.create(entities.game.FoodGroup.Component.prototype);
+  return v;
+};
+entities.game.FoodGroup.Component._toPtr = function(ptr, v) {
+};
+entities.game.FoodGroup.Component._toTempHeapPtr = function(ptr, v) {
+};
+entities.game.FoodGroup.Component._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) entities.game.FoodGroup.Component._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+entities.game.FoodGroup.Component.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+entities.game.FoodGroup.Component.StorageView.prototype = Object.create(null);
+entities.game.FoodGroup.Component.StorageView.prototype.constructor = entities.game.FoodGroup.Component.StorageView;
+entities.game.FoodGroup.Component._view = entities.game.FoodGroup.Component.StorageView;
+entities.game.FoodGroup.Component.StorageView._isSharedComp = entities.game.FoodGroup.Component._isSharedComp = false;
+entities.game.FoodGroup.Component.StorageView._fromPtr = entities.game.FoodGroup.Component._fromPtr;
+entities.game.FoodGroup.Component.StorageView._toPtr = entities.game.FoodGroup.Component._toPtr;
+entities.game.FoodGroup.Component.StorageView._tempHeapPtr = entities.game.FoodGroup.Component._tempHeapPtr;
+entities.game.FoodGroup.Component.StorageView._size = entities.game.FoodGroup.Component._size;
+entities.game.FoodGroup.Component.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(entities.game.FoodGroup.Component.StorageView.prototype, {
+});
+entities.game.FoodGroup.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// entities.game.FoodGroup.Component is a POD type, so a JavaScript side copy constructor entities.game.FoodGroup.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+entities.game.FoodGroup.Component._typeDesc = (function() {
+  return ut.meta.allocType(5, 'entities.game.FoodGroup.Component', 1, []);
+})();
+Object.defineProperties(entities.game.FoodGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.FoodGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.FoodGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.FoodGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.FoodGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.FoodGroup.Component.cid; } } });
 entities.game.MainGroup = entities.game.MainGroup || {};
 entities.game.MainGroup.Component = function() {
 };
@@ -1337,6 +1381,9 @@ ut.EditorExtensions.EntityLayer._typeDesc = (function() {
 Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.EntityLayer._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.EntityLayer.cid; } } });
 ut.EditorExtensions.EntityLayer.layer = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.EntityLayer };
+game.FoodSpawnSystemJS = ut.System.define({
+  name: "game.FoodSpawnSystemJS"
+});
 game.InputMovementSystemJS = ut.System.define({
   name: "game.InputMovementSystemJS"
 });

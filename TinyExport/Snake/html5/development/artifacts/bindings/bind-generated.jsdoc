@@ -1,6 +1,12 @@
 /**
 
 @component
+@memberof entities.game.FoodGroup
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.MainGroup
 @name Component
 */
@@ -285,6 +291,12 @@
 @member {int32}
 @memberof ut.EditorExtensions.EntityLayer
 @name layer
+*/
+/**
+
+@system
+@memberof game
+@name FoodSpawnSystemJS
 */
 /**
 

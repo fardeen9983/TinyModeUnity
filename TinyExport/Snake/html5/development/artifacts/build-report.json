@@ -26,9 +26,31 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 1777,
+                "Size": 3038,
                 "CompressedSize": 0
             }
+        }, {
+            "Item": {
+                "Name": "Assets/Snake/Graphics/Ball.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "1087f71b32a0c6b43a5193662ba15a45", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Snake/html5/development/artifacts/assets/Ball.jpg",
+                    "Size": 924,
+                    "CompressedSize": 601,
+                    "Object": { "$TypeId": 10, "Guid": "1087f71b32a0c6b43a5193662ba15a45", "FileId": 2800000, "Type": 3 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/Snake/html5/development/artifacts/assets/Ball_a.png",
+                    "Size": 4084,
+                    "CompressedSize": 3122,
+                    "Object": { "$TypeId": 10, "Guid": "1087f71b32a0c6b43a5193662ba15a45", "FileId": 2800000, "Type": 3 }
+                }
+            }]
         }, {
             "Item": {
                 "Name": "Assets/Snake/Graphics/Snake.png",
@@ -54,21 +76,27 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/entities.js",
-                "Size": 2844,
-                "CompressedSize": 925
+                "Size": 4249,
+                "CompressedSize": 1059
             },
             "Children": [{
                 "Item": {
+                    "Name": "FoodGroup",
+                    "Size": 1409,
+                    "CompressedSize": 494
+                }
+            }, {
+                "Item": {
                     "Name": "MainGroup",
-                    "Size": 2767,
-                    "CompressedSize": 857
+                    "Size": 2765,
+                    "CompressedSize": 854
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/bindings.js",
-                "Size": 84341,
-                "CompressedSize": 6747
+                "Size": 87340,
+                "CompressedSize": 6951
             }
         }, {
             "Item": {
@@ -79,15 +107,15 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Snake/html5/development/artifacts/scripts/tsc-emit.js",
-                    "Size": 6693,
-                    "CompressedSize": 1749
+                    "Size": 8374,
+                    "CompressedSize": 2116
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/main.js",
-                "Size": 2178,
-                "CompressedSize": 760
+                "Size": 2308,
+                "CompressedSize": 781
             }
         }, {
             "Item": {

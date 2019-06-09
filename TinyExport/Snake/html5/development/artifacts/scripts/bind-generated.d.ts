@@ -253,6 +253,7 @@ declare namespace ut{
         [module: string]: any;
         game: {
             [data: string]: EntityGroupData;
+            FoodGroup: EntityGroupData;
             MainGroup: EntityGroupData;
         }
     }
