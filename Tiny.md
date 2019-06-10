@@ -92,5 +92,20 @@ ___
     1. Set Mesh type to **Full Rect**
     1. Uncheck **Generate Physics Shape**
     1. Set Filter Mode to **Point**
-
+3. Open the sprite sheet in the sprite editor
+    1. Go to slice and select Grid by cell size
+    1. Set size to 50X37 pixels and pivot to bottom
+    1. Then click slice
+    1. Once done we need to override the max size for window to 1024 and then Pixels per unit to 18.5
+1. For the tileset again set the texture type to sprite, sprite mode to multiple and the pixel per unit to 16, mesh type to full rect and uncheck generate physics shape and max size to 256. Then go to sprite editor set slice dimension to 16X16 and then pivot to center. Then slice
+1. Rename the EntityGroup to Level and add an empty Entity
+    1. Add these components 
+        1. TransformNode 
+        1. TileMap
+        1. TileMapRenderer 
+        1. TileMapRechunk
+        1. LayerSorting 
+1. Open Tile Pallete window  
+    1. Create a new Tile Pallete with name ForegroundTilePallete and place it in a folder by the name of Pallete in the root Tiny project
+    1. Drag the Foreground tileset onto the new pallete
 
