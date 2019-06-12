@@ -2,7 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "outFile": "D:/Projects/Unity/TinyModeUnity/TinyExport/Platformer/html5/development/artifacts/scripts/tsc-emit.js",
+        "outFile": "D:/Projects/Unity/Platformer/TinyExport/Platformer/html5/development/artifacts/scripts/tsc-emit.js",
         "sourceMap": true,
         "target": "ES5"
     },
@@ -24,11 +24,13 @@
         "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.RendererGL/**/*.ts",
         "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.Sprite2D/**/*.ts",
         "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EditorExtensions/**/*.ts",
-        "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.Tilemap2D/**/*.ts"
+        "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.Physics2D/**/*.ts",
+        "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.Tilemap2D/**/*.ts",
+        "Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.HitBox2D/**/*.ts"
     ],
     "exclude": [],
     "files": [
         "TinyExport/Platformer/html5/development/artifacts/scripts/bind-generated.d.ts",
-        "Tiny/Dist/runtimedll/RuntimeStripped.d.ts"
+        "Tiny/Dist/runtimedll/RuntimeFull.d.ts"
     ]
 }

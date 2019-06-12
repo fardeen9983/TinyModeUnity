@@ -1,0 +1,192 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/Platformer/html5/development/build/runtime.js",
+                "Size": 6196610,
+                "CompressedSize": 784949
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 92458,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "Assets/Platformer/Graphics/adventurer-v1.5-Sheet.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "56112660ad99d644796f82e58d2b884f", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/adventurer-v1.5-Sheet.png",
+                    "Size": 90016,
+                    "CompressedSize": 67530,
+                    "Object": { "$TypeId": 10, "Guid": "56112660ad99d644796f82e58d2b884f", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/Platformer/Graphics/CloudsBack.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "cc0221e6e5de9634f834914acc89e147", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/CloudsBack.png",
+                    "Size": 3240,
+                    "CompressedSize": 1956,
+                    "Object": { "$TypeId": 10, "Guid": "cc0221e6e5de9634f834914acc89e147", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/Platformer/Graphics/CloudsFront.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "01c1a2000d82132499f3ee7abe8f9aa1", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/CloudsFront.png",
+                    "Size": 3584,
+                    "CompressedSize": 2244,
+                    "Object": { "$TypeId": 10, "Guid": "01c1a2000d82132499f3ee7abe8f9aa1", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/Platformer/Graphics/BGBack.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "1dbdaa291ebe1064d9c43220cdb4a41f", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/BGBack.png",
+                    "Size": 1800,
+                    "CompressedSize": 714,
+                    "Object": { "$TypeId": 10, "Guid": "1dbdaa291ebe1064d9c43220cdb4a41f", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/Platformer/Graphics/BGFront.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "689fb127b6cffd4478a77afd1c7c6e70", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/BGFront.png",
+                    "Size": 3912,
+                    "CompressedSize": 2467,
+                    "Object": { "$TypeId": 10, "Guid": "689fb127b6cffd4478a77afd1c7c6e70", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "sactx-256x128-Uncompressed-ForgroundSprites-8faac4a3",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/sactx-256x128-Uncompressed-ForgroundSprites-8faac4a3.png",
+                    "Size": 13516,
+                    "CompressedSize": 10209,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/Platformer/html5/development/build/entities.js",
+                "Size": 93602,
+                "CompressedSize": 11162
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "Bootstrap",
+                    "Size": 1355,
+                    "CompressedSize": 518
+                }
+            }, {
+                "Item": {
+                    "Name": "EnemyGroup",
+                    "Size": 15636,
+                    "CompressedSize": 2263
+                }
+            }, {
+                "Item": {
+                    "Name": "LevelGroup",
+                    "Size": 61373,
+                    "CompressedSize": 7079
+                }
+            }, {
+                "Item": {
+                    "Name": "PlayerGroup",
+                    "Size": 15162,
+                    "CompressedSize": 2147
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/Platformer/html5/development/build/bindings.js",
+                "Size": 126702,
+                "CompressedSize": 11041
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Size": 36800,
+                    "CompressedSize": 5526
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/Platformer/html5/development/build/main.js",
+                "Size": 4010,
+                "CompressedSize": 1061
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/Platformer/html5/development/build/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}

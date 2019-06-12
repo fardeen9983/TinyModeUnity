@@ -1,0 +1,668 @@
+/**
+
+@struct
+@memberof game
+@name AiState
+*/
+/**
+
+@member {game.AiState}
+@memberof game.AiState
+@name Idle
+*/
+/**
+
+@member {game.AiState}
+@memberof game.AiState
+@name Patrolling
+*/
+/**
+
+@member {game.AiState}
+@memberof game.AiState
+@name Attacking
+*/
+/**
+
+@struct
+@memberof game
+@name AnimationStates
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Idle
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Run
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Jump
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Attack01
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Attack02
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Attack03
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Hurt
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.AnimationStates
+@name Dying
+*/
+/**
+
+@struct
+@memberof game
+@name GameState
+*/
+/**
+
+@member {game.GameState}
+@memberof game.GameState
+@name Initialize
+*/
+/**
+
+@member {game.GameState}
+@memberof game.GameState
+@name Play
+*/
+/**
+
+@member {game.GameState}
+@memberof game.GameState
+@name GameOver
+*/
+/**
+
+@component
+@memberof entities.game.Bootstrap
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.EnemyGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.LevelGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.PlayerGroup
+@name Component
+*/
+/**
+
+@component
+@memberof game
+@name Ai
+*/
+/**
+
+@member {game.AiState}
+@memberof game.Ai
+@name State
+*/
+/**
+
+@member {game.AiState}
+@memberof game.Ai
+@name Previous
+*/
+/**
+
+@component
+@memberof game
+@name Animations
+*/
+/**
+
+@member {game.AnimationStates}
+@memberof game.Animations
+@name State
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Idle
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Run
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Jump
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Attack01
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Attack02
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Attack03
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Hurt
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Dying
+*/
+/**
+
+@component
+@memberof game
+@name Attack
+*/
+/**
+
+@member {float}
+@memberof game.Attack
+@name Timer
+*/
+/**
+
+@member {bool}
+@memberof game.Attack
+@name ComboStep
+*/
+/**
+
+@member {bool}
+@memberof game.Attack
+@name Hit
+*/
+/**
+
+@component
+@memberof game
+@name Destructible
+*/
+/**
+
+@component
+@memberof game
+@name Dying
+*/
+/**
+
+@member {float}
+@memberof game.Dying
+@name TimePlayed
+*/
+/**
+
+@member {float}
+@memberof game.Dying
+@name Length
+*/
+/**
+
+@component
+@memberof game
+@name FlipScale
+*/
+/**
+
+@component
+@memberof game
+@name Health
+*/
+/**
+
+@member {float}
+@memberof game.Health
+@name CurrentHp
+*/
+/**
+
+@member {float}
+@memberof game.Health
+@name MaxHp
+*/
+/**
+
+@component
+@memberof game
+@name Input
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Input
+@name Axis
+*/
+/**
+
+@component
+@memberof game
+@name Movement
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Movement
+@name Direction
+*/
+/**
+
+@member {int8}
+@memberof game.Movement
+@name Speed
+*/
+/**
+
+@member {int8}
+@memberof game.Movement
+@name JumpForce
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name Jumping
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name ShouldJump
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name OnGround
+*/
+/**
+
+@component
+@memberof game
+@name Patrol
+*/
+/**
+
+@member {int8}
+@memberof game.Patrol
+@name Direction
+*/
+/**
+
+@component
+@memberof game
+@name Player
+*/
+/**
+
+@component
+@memberof game
+@name PlayOneShot
+*/
+/**
+
+@member {float}
+@memberof game.PlayOneShot
+@name TimePlayed
+*/
+/**
+
+@member {float}
+@memberof game.PlayOneShot
+@name Length
+*/
+/**
+
+@component
+@memberof game
+@name GameConfig
+*/
+/**
+
+@member {game.GameState}
+@memberof game.GameConfig
+@name State
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Default
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name TransparentFX
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name IgnoreRaycast
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Water
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name UI
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceAnimationClip
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceAnimationClip
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceAnimationClip
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceAnimationClip
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceAudioClip
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceAudioClip
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceAudioClip
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceAudioClip
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceSprite
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceSprite
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceSprite
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceSprite
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceSpriteAtlas
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceSpriteAtlas
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceSpriteAtlas
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceSpriteAtlas
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceTexture2D
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceTexture2D
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceTexture2D
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceTexture2D
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceTileBase
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceTileBase
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceTileBase
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceTileBase
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceTMP_FontAsset
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceTMP_FontAsset
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceTMP_FontAsset
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceTMP_FontAsset
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name CameraCullingMask
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.CameraCullingMask
+@name mask
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name EntityLayer
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.EntityLayer
+@name layer
+*/
+/**
+
+@system
+@memberof game
+@name AiInputSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name AnimationSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name AttackSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name CollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name DeathSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name GameManagerServiceJS
+*/
+/**
+
+@system
+@memberof game
+@name HealthSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name MovementSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PatrolSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PlayerInputSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name ScaleSystemJS
+*/
+
+
