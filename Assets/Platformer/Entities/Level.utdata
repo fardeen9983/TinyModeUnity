@@ -6,12 +6,14 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "65d9a5ee322e4d3ba5cb3f273ad4b3e8", "Name": "Camera" },
+        { "$TypeId": 9, "Id": "f3d9c0e362f941fc84cb894e89b8fe99", "Name": "BackgroundSprites" },
+        { "$TypeId": 9, "Id": "21e370dc7f354e09bd3e100a7c68f20a", "Name": "CloudsBack" },
+        { "$TypeId": 9, "Id": "4acec053c91e4918895b97d013602732", "Name": "CloudsFront" },
+        { "$TypeId": 9, "Id": "639a48babc4c4328b9caf843f403489c", "Name": "BGBack" },
+        { "$TypeId": 9, "Id": "7c9be151605a4b188110d2ab120574fe", "Name": "BGFront" },
+        { "$TypeId": 9, "Id": "a935d942e4ba48139d8e347aa92c7a4e", "Name": "TileMap Background" },
         { "$TypeId": 9, "Id": "1425a8c696ba41568ebcafd3ebd7241a", "Name": "TileMap Platform" },
-        { "$TypeId": 9, "Id": "27c9dd00ea624dbf8a682e74d212abfa", "Name": "Background Sprites" },
-        { "$TypeId": 9, "Id": "225617a42a56465181c792805f1487ab", "Name": "CloudsBack" },
-        { "$TypeId": 9, "Id": "1589368f18e44eb082c47688c77fd420", "Name": "CloudsFront" },
-        { "$TypeId": 9, "Id": "abdfc74ac271456587592b1faa275cb6", "Name": "BGBack" },
-        { "$TypeId": 9, "Id": "1f2134f3a987497c8ae1998f044112f8", "Name": "BGFront" }
+        { "$TypeId": 9, "Id": "324b3e72c5da4b0d9f63831f0350f40e", "Name": "TileMap Foreground" }
     ]
 },
 {
@@ -45,6 +47,639 @@
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
                     "width": 1
+                }
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "f3d9c0e362f941fc84cb894e89b8fe99",
+    "Name": "BackgroundSprites",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "21e370dc7f354e09bd3e100a7c68f20a",
+    "Name": "CloudsBack",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "f3d9c0e362f941fc84cb894e89b8fe99", "Name": "BackgroundSprites" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": -0.6,
+                    "y": 3.1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1.304415,
+                    "y": 1.34946
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "3d91279dacc37a84996330a2de91116c", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "4acec053c91e4918895b97d013602732",
+    "Name": "CloudsFront",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "f3d9c0e362f941fc84cb894e89b8fe99", "Name": "BackgroundSprites" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": -0.6,
+                    "y": 3.1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1.304415,
+                    "y": 1.34946
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "0a2e1ccca24f48149bd4aabd7ed75957", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 1
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "639a48babc4c4328b9caf843f403489c",
+    "Name": "BGBack",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "f3d9c0e362f941fc84cb894e89b8fe99", "Name": "BackgroundSprites" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": -0.6,
+                    "y": 3.1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1.304415,
+                    "y": 1.34946
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "42387bf39061d4c47b55cdf1e6f88f04", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 2
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "7c9be151605a4b188110d2ab120574fe",
+    "Name": "BGFront",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "f3d9c0e362f941fc84cb894e89b8fe99", "Name": "BackgroundSprites" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": -0.6,
+                    "y": 3.1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1.304415,
+                    "y": 1.34946
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "3c03040d2c5da6b47b3f5d8e14b7c378", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 3
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "a935d942e4ba48139d8e347aa92c7a4e",
+    "Name": "TileMap Background",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "0d28ae8f9a388c9ed18b5c48668c08ab", "Name": "Tilemap" },
+        "Properties": {
+            "tiles": {
+                "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                "Items": [{
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 1,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 2,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 3,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 4,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 5,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 6,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 7,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 8,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "c272aded60f7725498a777976bda361b", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -17,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "d102c3fe500810345a52236407eaee15", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -16,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -15,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -14,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -13,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -12,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "49d059fde871fc748a6de52f31e4ebe9", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -8,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "d102c3fe500810345a52236407eaee15", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -7,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -6,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "49d059fde871fc748a6de52f31e4ebe9", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -5,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "b265f4f539d218c4690eebcee479077c", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -4,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "9f850ddc1c19db54bb494876e23a4d93", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -3,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "364e9967755c2a941aea05627a50dc50", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -2,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ea273c3af7ae7604993eb6bc70241fb3", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -1,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "b265f4f539d218c4690eebcee479077c", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "a5953840075b4714ea6da56fcfc78fae", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 8,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ea56053a5c1a50b4d817d58ce7d34495", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 9,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "b265f4f539d218c4690eebcee479077c", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 10,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "364e9967755c2a941aea05627a50dc50", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 11,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ea273c3af7ae7604993eb6bc70241fb3", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 12,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "b2432462886bcb14dbc5a1707c4746c2", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 13,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 14,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 15,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "ee3cd8c3fa04d6b46b424ca40a348b96", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 16,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "49d059fde871fc748a6de52f31e4ebe9", "FileId": 11400000, "Type": 2 }
+                    }
+                }]
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 4
+        }
+    }, {
+        "Type": { "Id": "d499c9b7a27c63edba34d6e61bf86837", "Name": "TilemapRechunk" }
+    }, {
+        "Type": { "Id": "e370f277f1ee85049c5156a2a1858b78", "Name": "TilemapRenderer" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": -1,
+                    "y": 0
                 }
             }
         }
@@ -3674,7 +4309,7 @@
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
-            "order": 10
+            "order": 5
         }
     }, {
         "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
@@ -3682,8 +4317,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 2.5,
-                    "y": -0.5
+                    "x": 2,
+                    "y": 0
                 }
             }
         }
@@ -3691,205 +4326,701 @@
 },
 {
     "$TypeId": 5,
-    "Id": "27c9dd00ea624dbf8a682e74d212abfa",
-    "Name": "Background Sprites",
+    "Id": "324b3e72c5da4b0d9f63831f0350f40e",
+    "Name": "TileMap Foreground",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "225617a42a56465181c792805f1487ab",
-    "Name": "CloudsBack",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
-        "Properties": {
-            "parent": { "$TypeId": 9, "Id": "27c9dd00ea624dbf8a682e74d212abfa", "Name": "Background Sprites" }
-        }
     }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Type": { "Id": "0d28ae8f9a388c9ed18b5c48668c08ab", "Name": "Tilemap" },
         "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": -0.8,
-                    "y": 2.6
-                }
+            "tiles": {
+                "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                "Items": [{
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -19,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "85f693eab862feb4080be63923e15e01", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -18,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -17,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "a44543c8926483f40880d5c49980ffcb", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -16,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -15,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -14,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -13,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -12,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -11,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "a44543c8926483f40880d5c49980ffcb", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -10,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -9,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -8,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -7,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -6,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -5,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "a44543c8926483f40880d5c49980ffcb", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -4,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -3,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -2,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "a44543c8926483f40880d5c49980ffcb", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -1,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf81918d2c93f164995caf7652ca3494", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 7,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "85f693eab862feb4080be63923e15e01", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 8,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 9,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 10,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 11,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 12,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 13,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 14,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 15,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 16,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf7452625aa95564dbaa6d4cc24c0551", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 17,
+                                "y": -5
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "bf81918d2c93f164995caf7652ca3494", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -19,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "dfbee023ff1f92a4c9cf98b54521276d", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -18,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -16,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -15,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -14,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -13,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -10,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -9,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -8,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -7,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -6,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -5,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "f6b7f2cb34031a04ebadf3dbacc34f37", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -4,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -3,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": -1,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "f6b7f2cb34031a04ebadf3dbacc34f37", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 7,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "dfbee023ff1f92a4c9cf98b54521276d", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 8,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 9,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 10,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 11,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 12,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 13,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 14,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 15,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 16,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "47c02c578415699439c36cbb2ab94578", "FileId": 11400000, "Type": 2 }
+                    }
+                }, {
+                    "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" },
+                    "Properties": {
+                        "position": {
+                            "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                            "Properties": {
+                                "x": 17,
+                                "y": -4
+                            }
+                        },
+                        "tile": { "$TypeId": 10, "Guid": "f6b7f2cb34031a04ebadf3dbacc34f37", "FileId": 11400000, "Type": 2 }
+                    }
+                }]
             }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1.3398,
-                    "y": 1.3398,
-                    "z": 1.3398
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "3d91279dacc37a84996330a2de91116c", "FileId": 21300000, "Type": 3 }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "1589368f18e44eb082c47688c77fd420",
-    "Name": "CloudsFront",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
-        "Properties": {
-            "parent": { "$TypeId": 9, "Id": "27c9dd00ea624dbf8a682e74d212abfa", "Name": "Background Sprites" }
-        }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": -0.9,
-                    "y": 2.6
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1.3398,
-                    "y": 1.3398,
-                    "z": 1.3398
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "0a2e1ccca24f48149bd4aabd7ed75957", "FileId": 21300000, "Type": 3 }
         }
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
-            "order": 1
-        }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "abdfc74ac271456587592b1faa275cb6",
-    "Name": "BGBack",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
-        "Properties": {
-            "parent": { "$TypeId": 9, "Id": "27c9dd00ea624dbf8a682e74d212abfa", "Name": "Background Sprites" }
+            "order": 7
         }
     }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": -0.9,
-                    "y": 2.6
-                }
-            }
-        }
+        "Type": { "Id": "d499c9b7a27c63edba34d6e61bf86837", "Name": "TilemapRechunk" }
     }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1.3398,
-                    "y": 1.3398,
-                    "z": 1.3398
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "42387bf39061d4c47b55cdf1e6f88f04", "FileId": 21300000, "Type": 3 }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "order": 2
-        }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "1f2134f3a987497c8ae1998f044112f8",
-    "Name": "BGFront",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
-        "Properties": {
-            "parent": { "$TypeId": 9, "Id": "27c9dd00ea624dbf8a682e74d212abfa", "Name": "Background Sprites" }
-        }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": -0.9,
-                    "y": 2.6
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1.3398,
-                    "y": 1.3398,
-                    "z": 1.3398
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "3c03040d2c5da6b47b3f5d8e14b7c378", "FileId": 21300000, "Type": 3 }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "order": 3
-        }
+        "Type": { "Id": "e370f277f1ee85049c5156a2a1858b78", "Name": "TilemapRenderer" }
     }]
 }]

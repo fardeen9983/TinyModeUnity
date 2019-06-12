@@ -26,24 +26,9 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 18559,
+                "Size": 60120,
                 "CompressedSize": 0
             }
-        }, {
-            "Item": {
-                "Name": "Assets/Platformer/Graphics/Tileset.png",
-                "Size": 0,
-                "CompressedSize": 0,
-                "Object": { "$TypeId": 10, "Guid": "9937b4ecef152d645a7515b2db9e1095", "FileId": 2800000, "Type": 3 }
-            },
-            "Children": [{
-                "Item": {
-                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/Tileset.webp",
-                    "Size": 3656,
-                    "CompressedSize": 2799,
-                    "Object": { "$TypeId": 10, "Guid": "9937b4ecef152d645a7515b2db9e1095", "FileId": 2800000, "Type": 3 }
-                }
-            }]
         }, {
             "Item": {
                 "Name": "Assets/Platformer/Graphics/CloudsBack.png",
@@ -104,6 +89,20 @@
                     "Object": { "$TypeId": 10, "Guid": "3c03040d2c5da6b47b3f5d8e14b7c378", "FileId": 2800000, "Type": 3 }
                 }
             }]
+        }, {
+            "Item": {
+                "Name": "sactx-256x128-DXT5-ForegroundSprites-dfee2a79",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Platformer/html5/development/artifacts/assets/sactx-256x128-DXT5-ForegroundSprites-dfee2a79.webp",
+                    "Size": 5720,
+                    "CompressedSize": 4358,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
         }]
     }, {
         "Item": {
@@ -114,14 +113,14 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Platformer/html5/development/build/entities.js",
-                "Size": 50139,
-                "CompressedSize": 5708
+                "Size": 74698,
+                "CompressedSize": 8342
             },
             "Children": [{
                 "Item": {
                     "Name": "Level",
-                    "Size": 50057,
-                    "CompressedSize": 5619
+                    "Size": 74616,
+                    "CompressedSize": 8249
                 }
             }]
         }, {

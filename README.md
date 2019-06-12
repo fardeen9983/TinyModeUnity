@@ -120,5 +120,14 @@ ___
     1. Change and add tiles to the rule tile to amend it
 1. Then add two platforms separated 
 1. Import the Background images into the graphics folder and select all for them into Texture type od sprite and change pixel per unit to 16 and mesh type to Full rect and uncheck generate physics shape and filter mode to point (no filter) and dimension to 512
-1. Now create an Entity to store these elements as sprite childs in it
+1. Now create an Entity to store these elements as sprite childs in it. Add different sprites for each background graphic with differnt sorting level
+1. To improve the quality of sprite now we will use a sprite atlas. In it
+    1. Diable rotation and tight packing
+    1. Set filter mode to Point and padding to 8
+    1. To the list of Objects for packing add teh tileset.    
+
+    This will make the tileset more cleaner and compact. You can also improve the quality of other sprites by changing default texture format in Tiny project build setting to source from jpg
+1. Now create two Tile map in the Level group for Foreground and background and add the proper sorting layers. 
+    1. Place Bushes and a bridge and some fences in background tilemap
+    1. Place grass on foreground tilemap
 
