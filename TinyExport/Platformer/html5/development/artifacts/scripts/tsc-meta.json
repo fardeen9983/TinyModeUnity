@@ -1,185 +1,45 @@
 {
     "Success": true,
     "Diagnostics": [],
-    "Systems": [
-        {
-            "Name": "AiInputSystem",
-            "QualifiedName": "game.AiInputSystem",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/AiInputSystem.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "AnimationSystem",
-            "QualifiedName": "game.AnimationSystem",
-            "Description": "",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/AnimationSystem.ts",
-                "Line": 6,
-                "Character": 17
-            },
-            "ExecuteAfter": [
-                "ut.Shared.UserCodeEnd"
-            ]
-        },
-        {
-            "Name": "AttackSystem",
-            "QualifiedName": "game.AttackSystem",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/AttackSystem.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "CollisionSystem",
-            "QualifiedName": "game.CollisionSystem",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/CollisionSystem.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "DeathSystem",
-            "QualifiedName": "game.DeathSystem",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/DeathSystem.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "GameManagerService",
-            "QualifiedName": "game.GameManagerService",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/GameManagerService.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "HealthSystem",
-            "QualifiedName": "game.HealthSystem",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/HealthSystem.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "MovementSystem",
-            "QualifiedName": "game.MovementSystem",
-            "Description": "",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/MovementSystem.ts",
-                "Line": 7,
-                "Character": 17
-            },
-            "ExecuteAfter": [
-                "ut.Shared.InputFence",
-                "ut.Shared.UserCodeStart"
-            ],
-            "ExecuteBefore": [
-                "ut.Shared.UserCodeEnd"
-            ]
-        },
-        {
-            "Name": "PatrolSystem",
-            "QualifiedName": "game.PatrolSystem",
-            "Description": "New System",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/PatrolSystem.ts",
-                "Line": 5,
-                "Character": 17
-            }
-        },
-        {
-            "Name": "PlayerInputSystem",
-            "QualifiedName": "game.PlayerInputSystem",
-            "Description": "",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/PlayerInputSystem.ts",
-                "Line": 5,
-                "Character": 17
-            },
-            "ExecuteBefore": [
-                "ut.Shared.InputFence"
-            ]
-        },
-        {
-            "Name": "ScaleSystem",
-            "QualifiedName": "game.ScaleSystem",
-            "Description": "",
-            "Source": {
-                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/ScaleSystem.ts",
-                "Line": 5,
-                "Character": 17
-            },
-            "ExecuteAfter": [
-                "ut.Shared.UserCodeEnd"
-            ]
-        }
-    ],
+    "Systems": [],
     "Filters": [],
     "Behaviours": [],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 120,
+            "Duration": 59,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 252,
+            "Duration": 229,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1825,
-            "Steps": 22
+            "Duration": 1214,
+            "Steps": 9
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 375,
+            "Duration": 65,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 13,
-            "Steps": 11
+            "Duration": 6,
+            "Steps": 0
         }
     ],
     "SourceFiles": [
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/AiInputSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/AnimationSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/AttackSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/CollisionSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/DeathSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/GameManagerService.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/GameService.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/HealthSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/InputService.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/MovementSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/PatrolSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/PlayerInputSystem.ts",
-        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/ScaleSystem.ts",
         "D:/Projects/Unity/Platformer/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/Projects/Unity/Platformer/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "972e7a9ca27f8267e0f5b54ef6afc14d",
-    "GeneratedAt": "Wed Jun 12 2019 10:28:12 GMT+0530 (India Standard Time)"
+    "InputHash": "81e6e841614652d98ee78d22eaa5d44c",
+    "GeneratedAt": "Wed Jun 12 2019 22:00:05 GMT+0530 (India Standard Time)"
 }
