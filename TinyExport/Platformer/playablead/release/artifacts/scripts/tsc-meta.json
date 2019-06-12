@@ -14,13 +14,13 @@
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 222,
+            "Duration": 264,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 781,
+            "Duration": 1196,
             "Steps": 9
         },
         {
@@ -40,6 +40,6 @@
         "D:/Projects/Unity/Platformer/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/Projects/Unity/Platformer/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "7714e964c952d3a344d6d566db8cfb5b",
-    "GeneratedAt": "Wed Jun 12 2019 22:10:09 GMT+0530 (India Standard Time)"
+    "InputHash": "1a6b1555961a5a308810f6bfd4d112a5",
+    "GeneratedAt": "Thu Jun 13 2019 00:23:53 GMT+0530 (India Standard Time)"
 }
