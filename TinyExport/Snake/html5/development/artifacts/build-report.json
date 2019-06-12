@@ -76,8 +76,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Snake/html5/development/build/entities.js",
-                "Size": 5936,
-                "CompressedSize": 1172
+                "Size": 4076,
+                "CompressedSize": 851
             },
             "Children": [{
                 "Item": {
@@ -88,8 +88,8 @@
             }, {
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 3028,
-                    "CompressedSize": 918
+                    "Size": 1168,
+                    "CompressedSize": 473
                 }
             }, {
                 "Item": {

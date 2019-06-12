@@ -51,7 +51,12 @@
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
-        "Type": { "Id": "0d28ae8f9a388c9ed18b5c48668c08ab", "Name": "Tilemap" }
+        "Type": { "Id": "0d28ae8f9a388c9ed18b5c48668c08ab", "Name": "Tilemap" },
+        "Properties": {
+            "tiles": {
+                "Type": { "Id": "38cddb9154a8669901635780ed05188b", "Name": "TileData" }
+            }
+        }
     }, {
         "Type": { "Id": "e370f277f1ee85049c5156a2a1858b78", "Name": "TilemapRenderer" }
     }, {
