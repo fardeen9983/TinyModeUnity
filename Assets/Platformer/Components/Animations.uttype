@@ -6,6 +6,23 @@
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "c501d23f3dab4e01ae7dc319619952a8",
+        "Name": "Idle",
+        "FieldType": { "Id": "5a182d9d039d4dfd8fa96132d05f9ee7", "Name": "EntityReference" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "cd250f6c98304fcb9bff549f52e3fd64",
+        "Name": "Run",
+        "FieldType": { "Id": "5a182d9d039d4dfd8fa96132d05f9ee7", "Name": "EntityReference" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
         "Type": { "Id": "b85aa94b21de4ea9aaaecca8ea3d8269", "Name": "Animations" }
     }

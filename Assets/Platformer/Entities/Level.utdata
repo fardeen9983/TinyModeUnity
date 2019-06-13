@@ -14,6 +14,8 @@
         { "$TypeId": 9, "Id": "a935d942e4ba48139d8e347aa92c7a4e", "Name": "TileMap Background" },
         { "$TypeId": 9, "Id": "1425a8c696ba41568ebcafd3ebd7241a", "Name": "TileMap Platform" },
         { "$TypeId": 9, "Id": "9b8e52df756441c6afef562b3991ee61", "Name": "Player" },
+        { "$TypeId": 9, "Id": "8b697c70fe5a48bfa318c30f00616989", "Name": "Idle Animation" },
+        { "$TypeId": 9, "Id": "60d9fa6471fb47b1ba9835a0a92858da", "Name": "Run Animation" },
         { "$TypeId": 9, "Id": "324b3e72c5da4b0d9f63831f0350f40e", "Name": "TileMap Foreground" },
         { "$TypeId": 9, "Id": "179f607c4c7f4e37ad2d3750ea5fa4f9", "Name": "Collider" }
     ]
@@ -4349,16 +4351,6 @@
     }, {
         "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
     }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -8298335312220782592, "Type": 3 }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "order": 6
-        }
-    }, {
         "Type": { "Id": "d4daaf9467b646f49d618edd20274baf", "Name": "PlayerInut" }
     }, {
         "Type": { "Id": "e66b8dfd4d4140e280cb29ed79f6e092", "Name": "Movement" },
@@ -4368,6 +4360,8 @@
         }
     }, {
         "Type": { "Id": "c2c16255ad3743caacfeb5da5d9b4939", "Name": "PlayerInput" }
+    }, {
+        "Type": { "Id": "b85aa94b21de4ea9aaaecca8ea3d8269", "Name": "Animations" }
     }, {
         "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
         "Properties": {
@@ -4400,6 +4394,98 @@
         }
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "8b697c70fe5a48bfa318c30f00616989",
+    "Name": "Idle Animation",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "9b8e52df756441c6afef562b3991ee61", "Name": "Player" }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -8298335312220782592, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 6
+        }
+    }, {
+        "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
+        "Properties": {
+            "sprites": {
+                "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
+                "Items": [
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -8298335312220782592, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -743574287658516480, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": 7740607489275592704, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": 7408750141001170944, "Type": 3 }
+                ]
+            },
+            "frameRate": 6
+        }
+    }, {
+        "Type": { "Id": "d2cfd18aa4facc33b1da7ae05205691b", "Name": "Sprite2DSequencePlayer" },
+        "Properties": {
+            "sequence": { "$TypeId": 9, "Id": "8b697c70fe5a48bfa318c30f00616989", "Name": "Idle Animation" },
+            "speed": 1
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "60d9fa6471fb47b1ba9835a0a92858da",
+    "Name": "Run Animation",
+    "Enabled": false,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "9b8e52df756441c6afef562b3991ee61", "Name": "Player" }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -6751727072218972160, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 6
+        }
+    }, {
+        "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
+        "Properties": {
+            "sprites": {
+                "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
+                "Items": [
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -6751727072218972160, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": 8253001898051764224, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -4604984495056093184, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": 8189100481268678656, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -6692866916249239552, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ac31886191236524b8f173354284e313", "FileId": -5852505231337717760, "Type": 3 }
+                ]
+            },
+            "frameRate": 6
+        }
+    }, {
+        "Type": { "Id": "d2cfd18aa4facc33b1da7ae05205691b", "Name": "Sprite2DSequencePlayer" },
+        "Properties": {
+            "sequence": { "$TypeId": 9, "Id": "60d9fa6471fb47b1ba9835a0a92858da", "Name": "Idle Animation" },
+            "speed": 1
+        }
     }]
 },
 {

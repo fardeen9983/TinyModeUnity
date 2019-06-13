@@ -150,4 +150,11 @@ ___
     1. PlayerInputSystem to accept keyboard input. Make it execute before the inpt fence
     1. Movement system to actually move the player. Make it execute after the input fence and user input starts and execute before user input ends.
 1. For animation remove the Sprite renderer from the player and instead create a new component for animation 
-    1. Have two entity references in it, for the idle and run state
+    1. Have two entity references in it, for the idle and run state.
+    1. Create an entity child in player with 
+        1. Transform node
+        1. A sprite renderer with first idle sprite
+        1. A layersorting
+        1. A Sprite2d sequence with the first 4 idle sprites and set a framerate of maybe 6 
+        1. A sprite2D sequence player to play the above sequence. Drag the idle animation entity into the sequence field and set speed to 1. 
+        1. Create a same entity child for run animation
