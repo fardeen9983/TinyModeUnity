@@ -7,6 +7,7 @@ using UTiny.HTML;
 using UTiny.Rendering;
 using ut.EditorExtensions;
 using UTiny.Tilemap2D;
+using UTiny.Physics2D;
 
 /*
  * !!! TEMP UNITL PROPER SCENE FORMAT !!!
@@ -23,6 +24,20 @@ namespace entities.game
 
 namespace game
 {
+    public struct FlipScale : IComponentData
+    {
+    }
+    public struct Movement : IComponentData
+    {
+        public Vector2 Direction;
+        public sbyte Speed;
+        public sbyte JumpForce;
+        public bool Jump;
+    }
+    public struct PlayerInput : IComponentData
+    {
+        public Vector2 axis;
+    }
 }
 
 namespace ut.Core2D
@@ -155,4 +170,24 @@ namespace ut.EditorExtensions
 
 namespace ut.Tilemap2D
 {
+}
+
+namespace ut.Physics2D
+{
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.InputFence))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class MovementSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.InputFence))]
+    public class PlayerInputSystemJS : IComponentSystem
+    {
+    }
 }

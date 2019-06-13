@@ -11,6 +11,47 @@ namespace entities.game.Level
 
     }
 }
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct FlipScale : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Movement : UTiny.IComponentData
+    {
+
+
+        public Unity.Mathematics.float2 Direction;
+        public sbyte Speed;
+        public sbyte JumpForce;
+        public bool Jump;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct PlayerInput : UTiny.IComponentData
+    {
+
+
+        public Unity.Mathematics.float2 axis;
+
+
+
+    }
+}
 namespace ut.Core2D.layers
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]

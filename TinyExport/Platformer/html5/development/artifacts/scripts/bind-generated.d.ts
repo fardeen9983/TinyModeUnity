@@ -78,6 +78,55 @@ declare namespace ut {
 }
 declare var UT_ASSETS: Object;
 declare namespace game{
+    class FlipScale extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: FlipScale): FlipScale;
+        static _toPtr(p: number, v: FlipScale): void;
+        static _tempHeapPtr(v: FlipScale): number;
+        static _dtorFn(v: FlipScale): void;
+    }
+    class Movement extends ut.Component {
+        constructor();
+        Direction: ut.Math.Vector2;
+        Speed: number;
+        JumpForce: number;
+        Jump: boolean;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Movement): Movement;
+        static _toPtr(p: number, v: Movement): void;
+        static _tempHeapPtr(v: Movement): number;
+        static _dtorFn(v: Movement): void;
+    }
+    class PlayerInput extends ut.Component {
+        constructor();
+        axis: ut.Math.Vector2;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: PlayerInput): PlayerInput;
+        static _toPtr(p: number, v: PlayerInput): void;
+        static _tempHeapPtr(v: PlayerInput): number;
+        static _dtorFn(v: PlayerInput): void;
+    }
+    class Animations extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Animations): Animations;
+        static _toPtr(p: number, v: Animations): void;
+        static _tempHeapPtr(v: Animations): number;
+        static _dtorFn(v: Animations): void;
+    }
 }
 declare namespace ut{
 }

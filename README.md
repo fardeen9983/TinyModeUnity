@@ -130,4 +130,24 @@ ___
 1. Now create two Tile map in the Level group for Foreground and background and add the proper sorting layers. 
     1. Place Bushes and a bridge and some fences in background tilemap
     1. Place grass on foreground tilemap
+1. Now crearte a new entity for holding player. To it add 
+    1. A transform Node with localposition and scale
+    1. A sprite2D renderer and add one of the adventurer sprite
+    1. A layersorting with layer of 6
+    1. A boxcolider2D with adjusted size an pivot
+    1. A Dynamic rigidbody with frozen rotation
+    1. A velocity2D to move the character
+1. To enable physics based collision create another entity with a box collider, transform node, local position, a static rigidbody . Do not change the pivot position. Make the width as long as the platform by changing it's dimension
 
+16. Now its time to create a component that enables the player to move on keyboard input. Let these components be
+    1. PlayerInput
+        * Add a vector 2 for axis input
+    1. FlipScale
+    1. Movement
+
+        * Add a direction vector2, int jump force and speed and a boolean for jump action
+1. Now lets create scripts for movement
+    1. PlayerInputSystem to accept keyboard input. Make it execute before the inpt fence
+    1. Movement system to actually move the player. Make it execute after the input fence and user input starts and execute before user input ends.
+1. For animation remove the Sprite renderer from the player and instead create a new component for animation 
+    1. Have two entity references in it, for the idle and run state

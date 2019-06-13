@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "c2c16255ad3743caacfeb5da5d9b4939",
+    "Name": "PlayerInput",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "9479bea268124514a161875d67630327",
+        "Name": "axis",
+        "FieldType": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "c2c16255ad3743caacfeb5da5d9b4939", "Name": "PlayerInput" }
+    }
+}]

@@ -7,6 +7,54 @@
 /**
 
 @component
+@memberof game
+@name FlipScale
+*/
+/**
+
+@component
+@memberof game
+@name Movement
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Movement
+@name Direction
+*/
+/**
+
+@member {int8}
+@memberof game.Movement
+@name Speed
+*/
+/**
+
+@member {int8}
+@memberof game.Movement
+@name JumpForce
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name Jump
+*/
+/**
+
+@component
+@memberof game
+@name PlayerInput
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.PlayerInput
+@name axis
+*/
+/**
+
+@component
 @memberof ut.Core2D.layers
 @name Default
 */
@@ -225,6 +273,18 @@
 @member {int32}
 @memberof ut.EditorExtensions.EntityLayer
 @name layer
+*/
+/**
+
+@system
+@memberof game
+@name MovementSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PlayerInputSystemJS
 */
 
 

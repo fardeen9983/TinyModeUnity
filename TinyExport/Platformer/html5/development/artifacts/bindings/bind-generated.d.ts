@@ -14,6 +14,64 @@ class Component extends ut.Component {
 }
 
 }
+declare namespace game {
+
+class FlipScale extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: FlipScale): FlipScale;
+  static _toPtr(p: number, v: FlipScale): void;
+  static _tempHeapPtr(v: FlipScale): number;
+  static _dtorFn(v: FlipScale): void;
+}
+
+}
+declare namespace game {
+
+class Movement extends ut.Component {
+  constructor(Direction?: Vector2, Speed?: number, JumpForce?: number, Jump?: boolean);
+  Direction: Vector2;
+  Speed: number;
+  JumpForce: number;
+  Jump: boolean;
+  static readonly Direction: Vector2ComponentFieldDesc;
+  
+  
+  static readonly Jump: ComponentFieldDesc;
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Movement): Movement;
+  static _toPtr(p: number, v: Movement): void;
+  static _tempHeapPtr(v: Movement): number;
+  static _dtorFn(v: Movement): void;
+}
+
+}
+declare namespace game {
+
+class PlayerInput extends ut.Component {
+  constructor(axis?: Vector2);
+  axis: Vector2;
+  static readonly axis: Vector2ComponentFieldDesc;
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: PlayerInput): PlayerInput;
+  static _toPtr(p: number, v: PlayerInput): void;
+  static _tempHeapPtr(v: PlayerInput): number;
+  static _dtorFn(v: PlayerInput): void;
+}
+
+}
 declare namespace ut.Core2D.layers {
 
 class Default extends ut.Component {
@@ -283,6 +341,12 @@ class EntityLayer extends ut.Component {
   static _dtorFn(v: EntityLayer): void;
 }
 
+}
+declare namespace game {
+var MovementSystemJS: ut.SystemJS;
+}
+declare namespace game {
+var PlayerInputSystemJS: ut.SystemJS;
 }
 
 

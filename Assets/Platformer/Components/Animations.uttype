@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "b85aa94b21de4ea9aaaecca8ea3d8269",
+    "Name": "Animations",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "b85aa94b21de4ea9aaaecca8ea3d8269", "Name": "Animations" }
+    }
+}]

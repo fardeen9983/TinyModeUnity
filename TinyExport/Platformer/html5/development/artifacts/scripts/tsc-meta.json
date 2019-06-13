@@ -1,45 +1,78 @@
 {
     "Success": true,
     "Diagnostics": [],
-    "Systems": [],
+    "Systems": [
+        {
+            "Name": "MovementSystem",
+            "QualifiedName": "game.MovementSystem",
+            "Description": "",
+            "Source": {
+                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/MovementSystem.ts",
+                "Line": 7,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence",
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "PlayerInputSystem",
+            "QualifiedName": "game.PlayerInputSystem",
+            "Description": "",
+            "Source": {
+                "File": "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/PlayerInputSystem.ts",
+                "Line": 5,
+                "Character": 17
+            },
+            "ExecuteBefore": [
+                "ut.Shared.InputFence"
+            ]
+        }
+    ],
     "Filters": [],
     "Behaviours": [],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 71,
+            "Duration": 122,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 222,
+            "Duration": 402,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 781,
-            "Steps": 9
+            "Duration": 2719,
+            "Steps": 11
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 34,
+            "Duration": 216,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 2,
-            "Steps": 0
+            "Duration": 37,
+            "Steps": 2
         }
     ],
     "SourceFiles": [
+        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/MovementSystem.ts",
+        "D:/Projects/Unity/Platformer/Assets/Platformer/Scripts/PlayerInputSystem.ts",
         "D:/Projects/Unity/Platformer/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/Projects/Unity/Platformer/Library/PackageCache/com.unity.tiny@0.14.1-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "7714e964c952d3a344d6d566db8cfb5b",
-    "GeneratedAt": "Wed Jun 12 2019 22:10:09 GMT+0530 (India Standard Time)"
+    "InputHash": "f81d50f8e964b052c4039e4872911f03",
+    "GeneratedAt": "Thu Jun 13 2019 07:32:38 GMT+0530 (India Standard Time)"
 }
