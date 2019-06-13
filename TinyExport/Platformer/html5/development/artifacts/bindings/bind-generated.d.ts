@@ -72,6 +72,26 @@ class PlayerInput extends ut.Component {
 }
 
 }
+declare namespace game {
+
+class Animations extends ut.Component {
+  constructor(Idle?: Entity, Run?: Entity);
+  Idle: Entity;
+  Run: Entity;
+  static readonly Idle: EntityComponentFieldDesc;
+  static readonly Run: EntityComponentFieldDesc;
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Animations): Animations;
+  static _toPtr(p: number, v: Animations): void;
+  static _tempHeapPtr(v: Animations): number;
+  static _dtorFn(v: Animations): void;
+}
+
+}
 declare namespace ut.Core2D.layers {
 
 class Default extends ut.Component {
@@ -343,10 +363,16 @@ class EntityLayer extends ut.Component {
 
 }
 declare namespace game {
+var AnimationSystemJS: ut.SystemJS;
+}
+declare namespace game {
 var MovementSystemJS: ut.SystemJS;
 }
 declare namespace game {
 var PlayerInputSystemJS: ut.SystemJS;
+}
+declare namespace game {
+var ScaleSystemJS: ut.SystemJS;
 }
 
 

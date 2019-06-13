@@ -55,6 +55,24 @@
 /**
 
 @component
+@memberof game
+@name Animations
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Idle
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Animations
+@name Run
+*/
+/**
+
+@component
 @memberof ut.Core2D.layers
 @name Default
 */
@@ -278,6 +296,12 @@
 
 @system
 @memberof game
+@name AnimationSystemJS
+*/
+/**
+
+@system
+@memberof game
 @name MovementSystemJS
 */
 /**
@@ -285,6 +309,12 @@
 @system
 @memberof game
 @name PlayerInputSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name ScaleSystemJS
 */
 
 

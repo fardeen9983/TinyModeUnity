@@ -19,6 +19,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var game;
 (function (game) {
+    var AnimationSystem = /** @class */ (function (_super) {
+        __extends(AnimationSystem, _super);
+        /** New System */
+        function AnimationSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        AnimationSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            this.world.forEach([game.Animations, game.Movement], function (animations, movement) {
+                if (movement.Direction.x == 0) {
+                    Utils.setEntityEnabled(_this.world, animations.Run, false);
+                    Utils.setEntityEnabled(_this.world, animations.Idle, true);
+                }
+                else {
+                    Utils.setEntityEnabled(_this.world, animations.Run, true);
+                    Utils.setEntityEnabled(_this.world, animations.Idle, false);
+                }
+            });
+        };
+        AnimationSystem = __decorate([
+            ut.executeAfter(ut.Shared.UserCodeEnd)
+            /** New System */
+        ], AnimationSystem);
+        return AnimationSystem;
+    }(ut.ComponentSystem));
+    game.AnimationSystem = AnimationSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
     var MovementSystem = /** @class */ (function (_super) {
         __extends(MovementSystem, _super);
         /** New System */
@@ -95,6 +124,38 @@ var game;
     }(ut.ComponentSystem));
     game.PlayerInputSystem = PlayerInputSystem;
 })(game || (game = {}));
+var game;
+(function (game) {
+    var ScaleSystem = /** @class */ (function (_super) {
+        __extends(ScaleSystem, _super);
+        /** New System */
+        function ScaleSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        ScaleSystem.prototype.OnUpdate = function () {
+            this.world.forEach([game.FlipScale, game.Movement, ut.Core2D.TransformLocalScale], function (scaleTag, movement, scale) {
+                scale.scale = new Vector3(movement.Direction.x == 0 ? scale.scale.x : movement.Direction.x, 1, 1);
+            });
+        };
+        ScaleSystem = __decorate([
+            ut.executeAfter(ut.Shared.UserCodeEnd)
+            /** New System */
+        ], ScaleSystem);
+        return ScaleSystem;
+    }(ut.ComponentSystem));
+    game.ScaleSystem = ScaleSystem;
+})(game || (game = {}));
+var Utils;
+(function (Utils) {
+    function setEntityEnabled(world, entity, enabled) {
+        var hasDisabledComponent = world.hasComponent(entity, ut.Disabled);
+        if (enabled && hasDisabledComponent)
+            world.removeComponent(entity, ut.Disabled);
+        else if (!enabled && !hasDisabledComponent)
+            world.addComponent(entity, ut.Disabled);
+    }
+    Utils.setEntityEnabled = setEntityEnabled;
+})(Utils || (Utils = {}));
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

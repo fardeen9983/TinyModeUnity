@@ -52,6 +52,20 @@ namespace game
 
     }
 }
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Animations : UTiny.IComponentData
+    {
+
+
+        public UTiny.Entity Idle;
+        public UTiny.Entity Run;
+
+
+
+    }
+}
 namespace ut.Core2D.layers
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]

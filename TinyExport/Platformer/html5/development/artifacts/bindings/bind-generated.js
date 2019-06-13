@@ -255,6 +255,82 @@ Object.defineProperties(game.PlayerInput.StorageView, { cid: { configurable: tru
 game.PlayerInput.axis = { $ofs:0, $t:"ut.Math.Vector2", $c:game.PlayerInput };
 game.PlayerInput.axis.y = { $ofs:4, $t:"float", $c:game.PlayerInput };
 game.PlayerInput.axis.x = { $ofs:0, $t:"float", $c:game.PlayerInput };
+game.Animations = function(arg0, arg1) {
+  this._Idle = (arg0 === undefined ? new ut.Entity : arg0);
+  this._Run = (arg1 === undefined ? new ut.Entity : arg1);
+};
+game.Animations.prototype = Object.create(null);
+game.Animations.prototype.constructor = game.Animations;
+Object.defineProperties(game.Animations.prototype, {
+  Idle: {
+    get: function() { return this._Idle; },
+    set: function(v) { this._Idle = (v === undefined ? new ut.Entity : v); },
+  },
+  Run: {
+    get: function() { return this._Run; },
+    set: function(v) { this._Run = (v === undefined ? new ut.Entity : v); },
+  },
+});
+game.Animations._size = 16;
+game.Animations._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.Animations.prototype);
+  v._Idle = ut.Entity._fromPtr(ptr+0);
+  v._Run = ut.Entity._fromPtr(ptr+8);
+  return v;
+};
+game.Animations._toPtr = function(ptr, v) {
+  ut.Entity._toPtr(ptr+0, v.Idle);
+  ut.Entity._toPtr(ptr+8, v.Run);
+};
+game.Animations._toTempHeapPtr = function(ptr, v) {
+  ut.Entity._toPtr(ptr+0, v.Idle);
+  ut.Entity._toPtr(ptr+8, v.Run);
+};
+game.Animations._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(16);
+  if (v) game.Animations._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.Animations.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.Animations.StorageView.prototype = Object.create(null);
+game.Animations.StorageView.prototype.constructor = game.Animations.StorageView;
+game.Animations._view = game.Animations.StorageView;
+game.Animations.StorageView._isSharedComp = game.Animations._isSharedComp = false;
+game.Animations.StorageView._fromPtr = game.Animations._fromPtr;
+game.Animations.StorageView._toPtr = game.Animations._toPtr;
+game.Animations.StorageView._tempHeapPtr = game.Animations._tempHeapPtr;
+game.Animations.StorageView._size = game.Animations._size;
+game.Animations.StorageView.prototype.$advance = function() {
+  this._ptr += 16;
+};
+Object.defineProperties(game.Animations.StorageView.prototype, {
+  Idle: {
+    get: function() { return ut.Entity._fromPtr(this._ptr+0); },
+    set: function(v) { if (typeof(v) !== 'object') { throw new Error('expected an object'); } ut.Entity._toPtr(this._ptr+0, v); },
+  },
+  Run: {
+    get: function() { return ut.Entity._fromPtr(this._ptr+8); },
+    set: function(v) { if (typeof(v) !== 'object') { throw new Error('expected an object'); } ut.Entity._toPtr(this._ptr+8, v); },
+  },
+});
+game.Animations._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.Animations is a POD type, so a JavaScript side copy constructor game.Animations._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.Animations._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.Animations', 16, [
+    {name: 'Idle', offset: 0, type: ut.meta.getType('ut.Entity')},
+    {name: 'Run', offset: 8, type: ut.meta.getType('ut.Entity')}
+  ]);
+})();
+Object.defineProperties(game.Animations, { cid: { configurable: true, get: function() { delete game.Animations.cid; var offsetsPtr = ut.tempHeapPtrI32([0,8]); var offsetsCount = 2; return game.Animations.cid = Module._ut_component_register_cid_with_type(game.Animations._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.Animations.StorageView, { cid: { configurable: true, get: function() { return game.Animations.cid; } } });
+game.Animations.Idle = { $ofs:0, $t:"ut.Entity", $c:game.Animations };
+game.Animations.Idle.index = { $ofs:0, $t:"int32_t", $c:game.Animations };
+game.Animations.Idle.version = { $ofs:4, $t:"int32_t", $c:game.Animations };
+game.Animations.Run = { $ofs:8, $t:"ut.Entity", $c:game.Animations };
+game.Animations.Run.index = { $ofs:8, $t:"int32_t", $c:game.Animations };
+game.Animations.Run.version = { $ofs:12, $t:"int32_t", $c:game.Animations };
 var ut = ut || {};
 ut.Core2D = ut.Core2D || {};
 ut.Core2D.layers = ut.Core2D.layers || {};
@@ -1255,6 +1331,10 @@ ut.EditorExtensions.EntityLayer._typeDesc = (function() {
 Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.EntityLayer._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.EntityLayer.cid; } } });
 ut.EditorExtensions.EntityLayer.layer = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.EntityLayer };
+game.AnimationSystemJS = ut.System.define({
+  name: "game.AnimationSystemJS"
+ ,updatesAfter: ["UTiny.Shared.UserCodeEnd"]
+});
 game.MovementSystemJS = ut.System.define({
   name: "game.MovementSystemJS"
  ,updatesBefore: ["UTiny.Shared.UserCodeEnd"]
@@ -1263,6 +1343,10 @@ game.MovementSystemJS = ut.System.define({
 game.PlayerInputSystemJS = ut.System.define({
   name: "game.PlayerInputSystemJS"
  ,updatesBefore: ["UTiny.Shared.InputFence"]
+});
+game.ScaleSystemJS = ut.System.define({
+  name: "game.ScaleSystemJS"
+ ,updatesAfter: ["UTiny.Shared.UserCodeEnd"]
 });
 
 

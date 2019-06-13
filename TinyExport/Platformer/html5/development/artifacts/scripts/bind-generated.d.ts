@@ -78,6 +78,19 @@ declare namespace ut {
 }
 declare var UT_ASSETS: Object;
 declare namespace game{
+    class Animations extends ut.Component {
+        constructor();
+        Idle: ut.Entity;
+        Run: ut.Entity;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Animations): Animations;
+        static _toPtr(p: number, v: Animations): void;
+        static _tempHeapPtr(v: Animations): number;
+        static _dtorFn(v: Animations): void;
+    }
     class FlipScale extends ut.Component {
         constructor();
         static readonly cid: number;
@@ -115,17 +128,6 @@ declare namespace game{
         static _toPtr(p: number, v: PlayerInput): void;
         static _tempHeapPtr(v: PlayerInput): number;
         static _dtorFn(v: PlayerInput): void;
-    }
-    class Animations extends ut.Component {
-        constructor();
-        static readonly cid: number;
-        static readonly _view: any;
-        static readonly _isSharedComp: boolean;
-        static _size: number;
-        static _fromPtr(p: number, v?: Animations): Animations;
-        static _toPtr(p: number, v: Animations): void;
-        static _tempHeapPtr(v: Animations): number;
-        static _dtorFn(v: Animations): void;
     }
 }
 declare namespace ut{

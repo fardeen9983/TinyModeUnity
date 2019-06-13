@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 61471,
+                "Size": 67887,
                 "CompressedSize": 0
             }
         }, {
@@ -128,21 +128,21 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Platformer/html5/development/build/entities.js",
-                "Size": 77172,
-                "CompressedSize": 8980
+                "Size": 80315,
+                "CompressedSize": 9417
             },
             "Children": [{
                 "Item": {
                     "Name": "Level",
-                    "Size": 77090,
-                    "CompressedSize": 8888
+                    "Size": 80233,
+                    "CompressedSize": 9324
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/Platformer/html5/development/build/bindings.js",
-                "Size": 79975,
-                "CompressedSize": 6645
+                "Size": 83988,
+                "CompressedSize": 7084
             }
         }, {
             "Item": {
@@ -153,15 +153,15 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Platformer/html5/development/artifacts/scripts/tsc-emit.js",
-                    "Size": 7953,
-                    "CompressedSize": 2042
+                    "Size": 10529,
+                    "CompressedSize": 2367
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/Platformer/html5/development/build/main.js",
-                "Size": 2699,
-                "CompressedSize": 881
+                "Size": 2947,
+                "CompressedSize": 913
             }
         }, {
             "Item": {

@@ -158,3 +158,5 @@ ___
         1. A Sprite2d sequence with the first 4 idle sprites and set a framerate of maybe 6 
         1. A sprite2D sequence player to play the above sequence. Drag the idle animation entity into the sequence field and set speed to 1. 
         1. Create a same entity child for run animation
+1. Create another system called Scale system which will flip the direction the player faces
+1. Now create an animation system.

@@ -4356,12 +4356,16 @@
         "Type": { "Id": "e66b8dfd4d4140e280cb29ed79f6e092", "Name": "Movement" },
         "Properties": {
             "Speed": 5,
-            "JumpForce": 25
+            "JumpForce": 2
         }
     }, {
         "Type": { "Id": "c2c16255ad3743caacfeb5da5d9b4939", "Name": "PlayerInput" }
     }, {
-        "Type": { "Id": "b85aa94b21de4ea9aaaecca8ea3d8269", "Name": "Animations" }
+        "Type": { "Id": "b85aa94b21de4ea9aaaecca8ea3d8269", "Name": "Animations" },
+        "Properties": {
+            "Idle": { "$TypeId": 9, "Id": "8b697c70fe5a48bfa318c30f00616989", "Name": "Idle Animation" },
+            "Run": { "$TypeId": 9, "Id": "60d9fa6471fb47b1ba9835a0a92858da", "Name": "Idle Animation" }
+        }
     }, {
         "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
         "Properties": {

@@ -38,6 +38,11 @@ namespace game
     {
         public Vector2 axis;
     }
+    public struct Animations : IComponentData
+    {
+        public Entity Idle;
+        public Entity Run;
+    }
 }
 
 namespace ut.Core2D
@@ -177,6 +182,13 @@ namespace ut.Physics2D
 }
 namespace game
 {
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeEnd))]
+    public class AnimationSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
     [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
     [UpdateAfter(typeof(UTiny.Shared.InputFence))]
     [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
@@ -188,6 +200,13 @@ namespace game
 {
     [UpdateBefore(typeof(UTiny.Shared.InputFence))]
     public class PlayerInputSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeEnd))]
+    public class ScaleSystemJS : IComponentSystem
     {
     }
 }
